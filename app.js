@@ -7,6 +7,7 @@ const PORT = 3000;
 const publicRoutes = require('./src/routes/public.routes');
 const operadoresRoutes = require('./src/routes/operadores.routes');
 const vehiculosRoutes = require('./src/routes/vehiculos.routes');
+const rutasRoutes = require('./src/routes/rutas.routes');
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -14,6 +15,7 @@ app.set("views", "./views");
 app.use('/', publicRoutes);
 app.use('/operadores', operadoresRoutes);
 app.use('/vehiculos', vehiculosRoutes);
+app.use('/rutas', rutasRoutes);
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);

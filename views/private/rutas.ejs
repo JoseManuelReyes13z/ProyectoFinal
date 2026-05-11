@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+    <h1>Lista de Rutas</h1>
+    <a href="/">Volver al menu principal</a>
+    <br><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre Ruta</th>
+                <th>Zona</th>
+                <th>Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% rutas.forEach((ruta) => { %>
+                <tr>
+                    <td><%= ruta.id_ruta %></td>
+                    <td><%= ruta.nombre_ruta %></td>
+                    <td><%= ruta.zona %></td>
+                    <td><%= ruta.descripcion %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
