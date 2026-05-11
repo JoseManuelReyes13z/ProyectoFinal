@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehiculos</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+    <h1>Lista de Vehiculos</h1>
+    <a href="/">Volver al menu principal</a>
+    <br><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Numero Unidad</th>
+                <th>Tipo</th>
+                <th>Placas</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% vehiculos.forEach((vehiculo) => { %>
+                <tr>
+                    <td><%= vehiculo.id_vehiculo %></td>
+                    <td><%= vehiculo.numero_unidad %></td>
+                    <td><%= vehiculo.tipo %></td>
+                    <td><%= vehiculo.placas %></td>
+                    <td><%= vehiculo.estado %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
