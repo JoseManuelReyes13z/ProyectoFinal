@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+    <h1>Lista de Operadores</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+                <th>Servicio</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% operadores.forEach((operador) => { %>
+                <tr>
+                    <td><%= operador.id_operador %></td>
+                    <td><%= operador.nombre %></td>
+                    <td><%= operador.apellido %></td>
+                    <td><%= operador.telefono %></td>
+                    <td><%= operador.tipo_servicio %></td>
+                    <td><%= operador.estado %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
