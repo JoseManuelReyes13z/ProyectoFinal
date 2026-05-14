@@ -11,6 +11,23 @@
     <!-- Enlace para volver al menú principal -->
     <a href="/">Volver al menú principal</a>
 
+        <h2>Agregar operador</h2>
+    <form action="/operadores/agregar" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="text" name="apellido" placeholder="Apellido" required>
+        <input type="text" name="telefono" placeholder="Telefono">
+        <select name="tipo_servicio" required>
+            <option value="mototaxi">Mototaxi</option>
+            <option value="bicitaxi">Bicitaxi</option>
+        </select>
+        <select name="estado" required>
+            <option value="activo">Activo</option>
+            <option value="inactivo">Inactivo</option>
+        </select>
+        <button type="submit">Agregar operador</button>
+    </form>
+    <br>
+
     <table border="1">
         <thead>
             <tr>

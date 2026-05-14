@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checadas</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+    <h1>Registro de Checadas</h1>
+    <a href="/">Volver al menu principal</a>
+    <br><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Operador</th>
+                <th>Unidad</th>
+                <th>Tipo</th>
+                <th>Ruta</th>
+                <th>Fecha</th>
+                <th>Entrada</th>
+                <th>Salida</th>
+                <th>Observaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% checadas.forEach((checada) => { %>
+                <tr>
+                    <td><%= checada.id_checada %></td>
+                    <td>
+                        <%= checada.nombre %>
+                        <%= checada.apellido %>
+                    </td>
+                    <td><%= checada.numero_unidad %></td>
+                    <td><%= checada.tipo %></td>
+                    <td><%= checada.nombre_ruta %></td>
+                    <td><%= checada.fecha %></td>
+                    <td><%= checada.hora_entrada %></td>
+                    <td><%= checada.hora_salida %></td>
+                    <td><%= checada.observaciones %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
